@@ -9,7 +9,7 @@ import { Container, Row, Col } from "reactstrap";
 
 import BuyPage from "./BuyPage";
 import Cart from "./Cart";
-import CartItem from "./CartItem";
+
 
 function Home() {
   const [cartItem, setCartItem] = useState([]);

@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 
 import { random, commerce } from "faker";
 import { Container, Col, Row } from "reactstrap";
-// import CartItem from "./CartItem";
+
 
 const apiKey = "INSET_YOUR_KEY_HERE";
 
@@ -15,14 +15,6 @@ const localurl =
 
 const BuyPage = ({ addInCart }) => {
   const [product, setProduct] = useState([]);
-
-  //   const fetchPhotos = async () => {
-  //       const response = await Axois.get(url, {
-  //           header: {
-  //               Authorization: apiKey
-  //           }
-  //       )};
-
   const fetchPhotos = async () => {
     const { data } = await Axois.get(localurl, {});
 
@@ -35,7 +27,6 @@ const BuyPage = ({ addInCart }) => {
       productPrice: commerce.price(),
       id: random.uuid(),
     }));
-
     setProduct(allProduct);
   };
 
